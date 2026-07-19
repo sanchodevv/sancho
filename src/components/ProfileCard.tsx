@@ -1,10 +1,10 @@
 import { profile } from "../data/profile";
-import { MapPin, Mail, Sparkles } from "lucide-react";
+import { MapPin, Mail, Sparkles, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ProfileCard() {
   return (
-    <motion.section 
+    <motion.section
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -37,14 +37,14 @@ export default function ProfileCard() {
       {/* Title / Name Info */}
       <div className="relative flex flex-col items-center">
         <div className="inline-flex items-center gap-1.5 rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-300 mb-3 backdrop-blur-sm border border-indigo-500/15">
-          <Sparkles className="h-3 w-3 animate-pulse" />
+          <Zap className="h-3 w-3 animate-pulse" />
           <span>Faol dasturchi</span>
         </div>
 
         <h1 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-white transition-colors duration-300">
           {profile.name}
         </h1>
-        
+
         <p className="mt-1 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 bg-[length:200%_auto] animate-gradient bg-clip-text text-sm font-semibold text-transparent">
           {profile.title}
         </p>
@@ -60,7 +60,7 @@ export default function ProfileCard() {
           <MapPin className="h-3.5 w-3.5 text-rose-500" />
           <span>{profile.location}</span>
         </div>
-        <a 
+        <a
           href={`mailto:${profile.email}`}
           className="flex items-center gap-1.5 rounded-xl bg-slate-100/60 hover:bg-slate-200/60 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/50 dark:border-white/5 px-3 py-1.5 text-xs text-slate-600 dark:text-neutral-400 transition-all"
         >
