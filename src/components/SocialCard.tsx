@@ -17,12 +17,11 @@ export default function SocialCard({ link, index }: Props) {
       rel="noopener noreferrer"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.6, 
+      transition={{
+        duration: 0.6,
         delay: 0.1 + index * 0.08,
-        ease: [0.16, 1, 0.3, 1] 
+        ease: [0.16, 1, 0.3, 1]
       }}
-      style={{ '--hover-glow-rgb': link.rgb } as React.CSSProperties}
       className="glass glass-card-hover group relative flex items-center gap-4 overflow-hidden rounded-2xl px-5 py-4 transition-all duration-300"
     >
       {/* Dynamic Hover Background Gradient */}
