@@ -45,7 +45,7 @@ export default function ProfileCard() {
           {profile.name}
         </h1>
         
-        <p className="mt-1 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 bg-clip-text text-sm font-semibold text-transparent">
+        <p className="mt-1 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 bg-[length:200%_auto] animate-gradient bg-clip-text text-sm font-semibold text-transparent">
           {profile.title}
         </p>
       </div>

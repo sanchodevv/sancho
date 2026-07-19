@@ -13,6 +13,7 @@ export default {
         'spin-slow': 'spin 8s linear infinite',
         'fade-up': 'fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards',
         'float': 'float 6s ease-in-out infinite',
+        'gradient': 'gradient 3s ease infinite',
       },
       keyframes: {
         blob: {
@@ -27,6 +28,10 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        gradient: {
+          '0%, 100%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
         },
       },
     },

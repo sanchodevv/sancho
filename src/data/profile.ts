@@ -26,8 +26,8 @@ export const profile = {
   title: 'Developer',
   bio: 'Men yosh dasturchi. Web dasturlash va ochiq kod loyihalari bilan shug‘ullanaman. Bu yerda meni barcha ijtimoiy tarmoqlarda topishingiz mumkin.',
   avatarFallback: 'SI',
-  location: 'Khorezm, O‘zbekiston',
-  email: 'sancho.devv@email.com',
+  location: 'Xiva, Uzbekistan',
+  email: '[EMAIL_ADDRESS]',
 }
 export const socialLinks: SocialLink[] = [
   {
