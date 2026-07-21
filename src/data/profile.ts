@@ -3,11 +3,15 @@ import {
   Send,
   Github,
   Globe,
-  Youtube,
-  Linkedin,
-  Mail,
   type LucideIcon,
 } from 'lucide-react';
+
+export interface PhotoItem {
+  id: string;
+  url: string;
+  title: string;
+  description?: string;
+}
 
 export interface SocialLink {
   id: string;
@@ -24,10 +28,30 @@ export interface SocialLink {
 export const profile = {
   name: 'Sancho Dev',
   title: 'Developer',
-  bio: 'Men yosh dasturchi. Web dasturlash va ochiq kod loyihalari bilan shug‘ullanaman. Bu yerda meni barcha ijtimoiy tarmoqlarda topishingiz mumkin.',
-  avatarFallback: 'SI',
+  bio: '',
+  avatarFallback: 'SD',
   location: 'Xiva, Uzbekistan',
-  email: '[EMAIL_ADDRESS]',
+  email: 'sanchodevv@email.com',
+  photos: [
+    {
+      id: 'photo1',
+      url: '/photo1.png',
+      title: 'Ish stolim',
+      description: 'Dasturlash va dizayn jarayoni uchun qulay sharoit'
+    },
+    {
+      id: 'photo2',
+      url: '/photo2.png',
+      title: 'Tabiat manzarasi',
+      description: 'Tog‘lar bag‘ridagi tungi osmon go‘zalligi'
+    },
+    {
+      id: 'photo3',
+      url: '/photo3.png',
+      title: 'Abstrakt dizayn',
+      description: 'Neon ranglar va 3D geometrik shakllar uyg‘unligi'
+    }
+  ] as PhotoItem[]
 }
 export const socialLinks: SocialLink[] = [
   {
@@ -69,35 +93,5 @@ export const socialLinks: SocialLink[] = [
     icon: Globe,
     gradient: 'from-emerald-400 to-teal-600',
     accent: '#10b981',
-  },
-  {
-    id: 'youtube',
-    name: 'YouTube',
-    handle: '@sancho-dev',
-    description: 'Dasturlash bo‘yicha videodarslar va tutoriallar',
-    url: 'https://youtube.com',
-    icon: Youtube,
-    gradient: 'from-red-500 to-rose-600',
-    accent: '#ef4444',
-  },
-  {
-    id: 'linkedin',
-    name: 'LinkedIn',
-    handle: 'linkedin.com/in/sanchodevv',
-    description: 'Professional profil va ish tajribam',
-    url: 'https://www.linkedin.com/in/sanchodevv/',
-    icon: Linkedin,
-    gradient: 'from-blue-500 to-indigo-700',
-    accent: '#3b82f6',
-  },
-  {
-    id: 'email',
-    name: 'Email',
-    handle: ' sanchodevv@email.com',
-    description: 'Hamkorlik va takliflar uchun yozing',
-    url: 'mailto:[EMAIL_ADDRESS]',
-    icon: Mail,
-    gradient: 'from-violet-400 to-purple-600',
-    accent: '#8b5cf6',
   },
 ];
